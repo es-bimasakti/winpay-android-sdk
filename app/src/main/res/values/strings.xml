@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">WinPay SDK Impl</string>
+    <string name="app_name">Contoh Implementasi WinPay SDK</string>
+    <string name="warning_unknown">Respon null dari SDK</string>
 </resources>

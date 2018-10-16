@@ -1,5 +1,6 @@
 package id.winpay.toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
@@ -9,8 +10,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import id.winpay.winpaysdk.main.activity.WPIToolbarImplActivity;
+import id.winpay.winpaysdk.main.helper.AffinityHelper;
+import id.winpay.winpaysdk.main.helper.DialogHelper;
 import id.winpay.winpaysdk.main.item.WPIItem;
 import id.winpay.winpaysdk.main.item.WPIObject;
+import id.winpay.winpaysdk.main.item.WPIResponse;
 
 /**
  * Created by Dian Cahyono on 08/10/18.
@@ -84,6 +88,18 @@ public class MainActivity extends AppCompatActivity {
             object.addSpi_item(item);
 
             WPIToolbarImplActivity.start(this, REQUEST_SPI_TOOLBAR, object, "");
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_SPI_TOOLBAR && data != null) {
+            WPIResponse response = AffinityHelper.intentToResponse(data);
+            if (response != null) {
+                DialogHelper.toast(this, response.getResponse_desc());
+            } else {
+                DialogHelper.toast(this, getString(R.string.warning_unknown));
+            }
         }
     }
 }

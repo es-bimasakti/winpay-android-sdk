@@ -9,64 +9,100 @@
         android:orientation="vertical"
         android:padding="8dp">
 
-        <EditText
-            android:id="@+id/spi_merchant_transaction_reff"
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:digits="abcdefghijklmnopqrstuvwxyz1234567890"
-            android:hint="ID Referensi"
-            android:inputType="text" />
+            android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/spi_billingName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:hint="Nama Pembeli"
-            android:inputType="text" />
+            <EditText
+                android:id="@+id/spi_merchant_transaction_reff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="abcdefghijklmnopqrstuvwxyz1234567890"
+                android:hint="ID Referensi"
+                android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
 
-        <EditText
-            android:id="@+id/spi_billingPhone"
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:hint="No HP Pembeli"
-            android:inputType="phone" />
+            android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/spi_billingEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:hint="Email Pembeli"
-            android:inputType="textEmailAddress" />
+            <EditText
+                android:id="@+id/spi_billingName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:hint="Nama Pembeli"
+                android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
 
-        <EditText
-            android:id="@+id/spi_item_name"
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:hint="Nama Barang"
-            android:inputType="text" />
+            android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/spi_item_price"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:hint="Harga Barang"
-            android:inputType="number" />
+            <EditText
+                android:id="@+id/spi_billingPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:hint="No HP Pembeli"
+                android:inputType="phone" />
+        </android.support.design.widget.TextInputLayout>
 
-        <EditText
-            android:id="@+id/spi_item_description"
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:hint="Catatan (opsional)"
-            android:lines="5" />
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/spi_billingEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:hint="Email Pembeli"
+                android:inputType="textEmailAddress" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/spi_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:hint="Nama Barang"
+                android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/spi_item_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:hint="Harga Barang"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/spi_item_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:hint="Catatan (opsional)"
+                android:lines="5" />
+        </android.support.design.widget.TextInputLayout>
 
         <Button
             android:id="@+id/btn_submit"
+            style="@style/WPIButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
