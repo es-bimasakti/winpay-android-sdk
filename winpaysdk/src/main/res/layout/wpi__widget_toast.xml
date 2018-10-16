@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wpi__toast_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/wpi__padding_medium">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/wpi__panel_rounded_background_dark"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/wpi__toast_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/wpi__padding_medium"
+            android:textColor="@color/wpi__colorBackground"
+            tools:text="@string/app_name" />
+    </FrameLayout>
+
+</RelativeLayout>

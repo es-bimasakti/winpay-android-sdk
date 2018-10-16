@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/wpi__dialog_icon"
+            android:layout_width="@dimen/wpi__icon_large"
+            android:layout_height="@dimen/wpi__icon_large"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_real_name"
+            android:src="@drawable/wpi__ic_check" />
+
+        <TextView
+            android:id="@+id/wpi__dialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/wpi__dialog_margin"
+            android:layout_marginTop="@dimen/wpi__dialog_margin"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/wpi__colorPrimary"
+            android:textSize="@dimen/wpi__text_size_medium" />
+
+        <Button
+            android:id="@+id/wpi__dialog_button_ok"
+            style="@style/WPIButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/wpi__button_ok" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="wpi__sandbox_mode">false</bool>
+    <bool name="wpi__is_loggable">false</bool>
+    <bool name="wpi__show_direct_label">@bool/wpi__sandbox_mode</bool>
+
+    <color name="wpi__colorPrimary">#1B75BC</color>
+    <color name="wpi__colorPrimaryDark">#004F92</color>
+    <color name="wpi__colorAccent">#F58600</color>
+    <color name="wpi__colorBackground">#FFFFFF</color>
+    <color name="wpi__colorBackgroundDark">#000000</color>
+    <color name="wpi__colorTransparent">#77000000</color>
+    <color name="wpi__colorGridBackground">#11F58600</color>
+
+    <dimen name="wpi__icon_medium">24dp</dimen>
+    <dimen name="wpi__icon_large">48dp</dimen>
+    <dimen name="wpi__padding_small">8dp</dimen>
+    <dimen name="wpi__padding_medium">16dp</dimen>
+    <dimen name="wpi__text_size_medium">16sp</dimen>
+    <dimen name="wpi__text_size_large">24sp</dimen>
+
+    <dimen name="wpi__border_radius">8dp</dimen>
+    <dimen name="wpi__border_width">2dp</dimen>
+    <dimen name="wpi__dialog_margin">32dp</dimen>
+    <dimen name="wpi__card_elevation">4dp</dimen>
+    <dimen name="wpi__toolbar_image_initial_height">81dp</dimen>
+
+    <integer name="wpi__toolbar_grid">3</integer>
+    <integer name="wpi__toolbar_image_width">512</integer>
+    <integer name="wpi__toolbar_image_height">214</integer>
+
+    <string name="wpi__private_key_1">PV1</string>
+    <string name="wpi__private_key_2">PV2</string>
+    <string name="wpi__merchant_key">MKEY</string>
+    <string name="wpi__button_ok">OK</string>
+    <string name="wpi__button_yes">Ya</string>
+    <string name="wpi__button_cancel">Batal</string>
+    <string name="wpi__button_visit">Lihat Cara Pembayaran</string>
+
+    <!--<string name="wpi__confirm_exit_web">Transaksi yang dibatalkan tidak dapat diulang, apakah Anda yakin akan membatalkan proses transaksi ini?</string>-->
+    <string name="wpi__confirm_exit_toolbar">Apakah Anda yakin akan kembali ke halaman sebelumnya?</string>
+
+    <string name="wpi__info_process_waiting">mohon tunggu…</string>
+    <string name="wpi__info_process_loading">kami sedang memproses permintaan Anda</string>
+    <string name="wpi__info_response_cancelled">Transaksi dibatalkan oleh pelanggan</string>
+    <string name="wpi__info_response_unknown">Kesalahan Umum</string>
+    <string name="wpi__info_response_feature_not_supported">Fitur Belum Tersedia</string>
+    <string name="wpi__info_text_copied">Teks telah tersalin</string>
+    <string name="wpi__info_toolbar">Silakan pilih media pembayaran favorit Anda untuk melanjutkan pembayaran</string>
+
+    <string name="wpi__warning_connection_failure">Tidak dapat tersambung ke Server</string>
+    <string name="wpi__warning_connection_denied">Ditolak Server dengan kode %1$d</string>
+    <string name="wpi__warning_connection_canceled">Koneksi ke Server di batalkan</string>
+    <string name="wpi__warning_connection_unknown">Kesalahan tidak diketahui</string>
+    <string name="wpi__warning_connection_response">Respon dari server tidak dikenali oleh Aplikasi</string>
+    <string name="wpi__warning_connection_offline">Tidak ada koneksi internet</string>
+    <string name="wpi__warning_connection_timeout">Waktu tempuh koneksi ke server telah habis</string>
+
+    <string name="wpi__title_confirm">Konfirmasi</string>
+    <string name="wpi__title_info">Informasi</string>
+    <string name="wpi__title_warning">Perhatian</string>
+</resources>

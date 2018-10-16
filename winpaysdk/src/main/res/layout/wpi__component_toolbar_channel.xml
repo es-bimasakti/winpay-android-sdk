@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/wpi__padding_small"
+        tools:ignore="UseCompoundDrawables,UselessParent">
+
+        <ImageView
+            android:id="@+id/wpi__payment_logo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/wpi__toolbar_image_initial_height"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_real_name"
+            android:src="@drawable/wpi__loading_placeholder" />
+
+        <TextView
+            android:id="@+id/wpi__payment_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/wpi__padding_small"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="@string/app_real_name"
+            android:textAllCaps="true"
+            android:textColor="@color/wpi__colorPrimary"
+            android:textSize="@dimen/wpi__text_size_medium" />
+
+        <TextView
+            android:id="@+id/wpi__payment_direct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/app_channel_direct"
+            android:textColor="@color/wpi__colorAccent"
+            android:textStyle="italic|bold"
+            android:visibility="visible" />
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/wpi__icon_large"
+            android:layout_height="@dimen/wpi__icon_large"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_real_name"
+            android:src="@drawable/wpi__ic_question" />
+
+        <TextView
+            android:id="@+id/wpi__dialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/wpi__dialog_margin"
+            android:layout_marginTop="@dimen/wpi__dialog_margin"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/wpi__colorPrimary"
+            android:textSize="@dimen/wpi__text_size_medium" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/wpi__dialog_button_cancel"
+                style="@style/WPIButton.accent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/wpi__padding_small"
+                android:layout_weight="1"
+                android:text="@string/wpi__button_cancel" />
+
+            <Button
+                android:id="@+id/wpi__dialog_button_yes"
+                style="@style/WPIButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/wpi__padding_small"
+                android:layout_weight="1"
+                android:text="@string/wpi__button_yes" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

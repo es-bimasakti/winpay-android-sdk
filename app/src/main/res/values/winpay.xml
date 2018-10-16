@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="wpi__sandbox_mode">true</bool>
+    <bool name="wpi__is_loggable">true</bool>
+
+    <string name="wpi__private_key_1">9220fbdeb1d115a4f2e9b2636edc24cc</string>
+    <string name="wpi__private_key_2">5b74d200096570de0280b9838c7af1ab</string>
+    <string name="wpi__merchant_key">c9c64d57f0c606ef06c297f96697cab4</string>
+
+    <!--<color name="wpi__colorPrimary">@color/colorPrimary</color>-->
+    <!--<color name="wpi__colorPrimaryDark">@color/colorPrimaryDark</color>-->
+    <!--<color name="wpi__colorAccent">@color/colorAccent</color>-->
+    <!--<color name="wpi__colorAccentTransparent">#33FF4081</color>-->
+    <!--<color name="wpi__colorBorder">#333F51B5</color>-->
+</resources>

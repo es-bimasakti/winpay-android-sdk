@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/spi_merchant_transaction_reff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="abcdefghijklmnopqrstuvwxyz1234567890"
+            android:hint="ID Referensi"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/spi_billingName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="Nama Pembeli"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/spi_billingPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="No HP Pembeli"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/spi_billingEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="Email Pembeli"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/spi_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="Nama Barang"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/spi_item_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="Harga Barang"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/spi_item_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="Catatan (opsional)"
+            android:lines="5" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:padding="16dp"
+            android:text="Kirim" />
+
+    </LinearLayout>
+
+</ScrollView>

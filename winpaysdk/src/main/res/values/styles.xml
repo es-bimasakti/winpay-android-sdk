@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="WPIAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/wpi__colorPrimary</item>
+        <item name="colorPrimaryDark">@color/wpi__colorPrimaryDark</item>
+        <item name="colorAccent">@color/wpi__colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowActionBarOverlay">false</item>
+        <item name="android:windowContentTransitions" tools:targetApi="lollipop">true</item>
+    </style>
+
+    <style name="WPIAppTheme.Transparent" parent="WPIAppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/wpi__colorTransparent</item>
+    </style>
+
+    <style name="WPIAppDialog" parent="Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowEnterAnimation">@anim/wpi__fade_in</item>
+        <item name="android:windowExitAnimation">@anim/wpi__fade_out</item>
+    </style>
+
+    <style name="WPIAppDialog.Transparent" parent="WPIAppDialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/wpi__colorTransparent</item>
+    </style>
+
+    <style name="WPIButton" parent="@android:style/Widget.Button">
+        <item name="android:padding">@dimen/wpi__padding_medium
+        </item>
+        <!--<item name="android:elevation" tools:targetApi="LOLLIPOP">@dimen/wpi__elevation_medium-->
+        <!--</item>-->
+        <item name="android:background">@drawable/wpi__button_primary</item>
+        <item name="android:textColor">@color/wpi__colorPrimary</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WPIButton.accent" parent="WPIButton">
+        <item name="android:background">@drawable/wpi__button_accent</item>
+        <item name="android:textColor">@color/wpi__colorAccent</item>
+    </style>
+
+    <style name="WPICard">
+        <item name="android:elevation" tools:targetApi="lollipop">@dimen/wpi__card_elevation</item>
+    </style>
+
+    <style name="WPIRecycler">
+        <item name="android:nestedScrollingEnabled" tools:targetApi="lollipop">false
+        </item>
+    </style>
+
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/wpi__cwtg_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/wpi__colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/wpi__padding_medium"
+        android:text="@string/app_real_name"
+        android:textColor="@color/wpi__colorBackground" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/wpi__cwtg_channels"
+        style="@style/WPIRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

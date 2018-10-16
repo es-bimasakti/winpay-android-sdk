@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/wpi__toolbar_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/wpi__sandbox_warning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/wpi__colorAccent"
+            android:gravity="center"
+            android:padding="@dimen/wpi__padding_medium"
+            android:text="@string/app_warning_sandbox"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/wpi__colorBackground"
+            android:gravity="center"
+            android:padding="@dimen/wpi__padding_medium"
+            android:text="@string/wpi__info_toolbar"
+            android:textColor="@color/wpi__colorPrimary" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="@dimen/wpi__padding_medium">
+
+    <FrameLayout
+        style="@style/WPICard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:background="@drawable/wpi__panel_rounded_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/wpi__padding_medium">
+
+            <ImageView
+                android:layout_width="@dimen/wpi__icon_large"
+                android:layout_height="@dimen/wpi__icon_large"
+                android:layout_marginBottom="@dimen/wpi__padding_medium"
+                android:layout_marginTop="@dimen/wpi__padding_medium"
+                android:contentDescription="@string/app_real_name"
+                android:src="@drawable/wpi__ic_check" />
+
+            <TextView
+                android:id="@+id/wpi__direct_content_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/wpi__text_size_medium"
+                tools:text="@string/app_name" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/wpi__padding_medium"
+                android:layout_marginTop="@dimen/wpi__padding_medium"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/wpi__padding_small"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/wpi__direct_payment_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/wpi__padding_small"
+                    android:textColor="@color/wpi__colorPrimary"
+                    android:textSize="@dimen/wpi__text_size_large"
+                    android:textStyle="bold"
+                    tools:text="@string/app_name" />
+
+                <ImageView
+                    android:id="@+id/wpi__direct_copy"
+                    android:layout_width="@dimen/wpi__icon_medium"
+                    android:layout_height="@dimen/wpi__icon_medium"
+                    android:contentDescription="@string/app_real_name"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/wpi__ic_copy" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/wpi__direct_content_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/wpi__text_size_medium"
+                tools:text="@string/app_name" />
+
+            <Button
+                android:id="@+id/wpi__btn_visit"
+                style="@style/WPIButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/wpi__padding_medium"
+                android:text="@string/wpi__button_visit" />
+
+            <Button
+                android:id="@+id/wpi__btn_ok"
+                style="@style/WPIButton.accent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/wpi__padding_small"
+                android:text="@string/wpi__button_ok" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

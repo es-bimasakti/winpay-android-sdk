@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/wpi__colorBackground" />
+
+            <stroke
+                android:width="@dimen/wpi__border_width"
+                android:color="@color/wpi__colorAccent" />
+
+            <corners android:radius="@dimen/wpi__border_radius" />
+        </shape>
+    </item>
+
+</layer-list>
