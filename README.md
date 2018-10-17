@@ -1,5 +1,7 @@
 # WinPay Payment Interface (WPI) Android SDK
-***
+
+[![GPL Licence](https://member.winpay.id/assets/img/sdk-android/license.svg)](https://opensource.org/licenses/GPL-3.0/) [![Maintenance](https://member.winpay.id/assets/img/sdk-android/maintained.svg)](https://github.com/es-bimasakti/winpay-android-sdk/graphs/commit-activity)  [![Release](https://member.winpay.id/assets/img/sdk-android/release.svg)](https://github.com/es-bimasakti/winpay-android-sdk/releases) 
+
 
 ***===SDK ini sedang dalam masa development, pemakaian sebelum rilis tidak disarankan dan resiko tidak ditanggung===***
 
