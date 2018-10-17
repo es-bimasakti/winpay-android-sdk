@@ -102,7 +102,9 @@ protected void onActivityResult(int requestCode, int resultCode, Intent intent) 
 
 [WPIResponse](README_WPIRESPONSE.md) adalah obyek yang dikembalikan saat ***onActivityResult*** melalui intent. Gunakan ***AffinityHelper.intentToResponse(intent)*** untuk konversi intent ke WPIResponse.
 
-> **Aplikasi untuk melakukan rekapitulasi hasil pembayaran secara internal karena WinPay hanya memberikan pelaporan berupa transaksi yang telah berhasil.**
+```diff
+- Aplikasi diwajibkan untuk melakukan rekapitulasi hasil pembayaran secara internal karena WinPay hanya memberikan pelaporan berupa transaksi yang telah berhasil.
+```
 
 ## Kustomisasi Sumber Daya (*Resource Customization*)
 
