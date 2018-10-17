@@ -71,8 +71,41 @@ Buat file res dengan nama **winpay.xml** dengan konten minimum
 |private_key_1|String|-|Private key yang didapatkan saat generate melalui member area, digunakan sebagai password|
 |merchant_key|String|-|Merchant key yang didapatkan saat generate melalui member area, digunakan sebagai hash/salt untuk melakukan enkripsi signature|
 
+Panggil Activity WPI
+
+```java
+WPIToolbarImplActivity.start(activity, request_code, wpi_object, url_listener);
+```
+
+| Variabel     | Type      | Nilai Awal | Deskripsi                                                    |
+| ------------ | --------- | ---------- | ------------------------------------------------------------ |
+| activity     | Activity  | -          | Activity untuk memanggil intent activity WPI                 |
+| request_code | Integer   | -          | Private key yang didapatkan saat generate melalui member area, digunakan sebagai password |
+| wpi_object   | WPIObject | -          | Obyek yang berisi parameter basis request ke WPI, lihat di [Detail WPI Object](README_WPIOBJECT.md) |
+| url_listener | String    | -          | (Opsional) URL listener untuk system WinPay melakukan notifikasi ketika ada pembayaran sukses |
+
+Pasang ***onActivityResult*** pada Activity Anda
+
+```java
+@Override
+protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+    if (requestCode == REQUEST_SPI_TOOLBAR && data != null) {
+        WPIResponse response = AffinityHelper.intentToResponse(intent);
+        if (response != null) {
+            //tampilkan response.getResponse_desc();
+        } else {
+            //tampilkan warning/error lain
+        }
+    }
+}
+```
+
+[WPIResponse](README_WPIRESPONSE.md) adalah obyek yang dikembalikan saat ***onActivityResult*** melalui intent. Gunakan ***AffinityHelper.intentToResponse(intent)*** untuk konversi intent ke WPIResponse.
+
+> **Aplikasi untuk melakukan rekapitulasi hasil pembayaran secara internal karena WinPay hanya memberikan pelaporan berupa transaksi yang telah berhasil.**
 
 ## Kustomisasi Sumber Daya (*Resource Customization*)
+
 TBD
 
 ## Kustomisasi Activity (*Activity Customization*)
