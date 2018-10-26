@@ -11,11 +11,11 @@ import id.winpay.winpaysdk.util.Var;
  */
 public class SuperMessage extends HashMap<String, Object> {
 
-    public static final String INDEX_RC = "rc";
-    public static final String INDEX_DESC = "rd";
-    public static final String INDEX_DATA = "data";
+    private static final String INDEX_RC = "rc";
+    private static final String INDEX_DESC = "rd";
+    private static final String INDEX_DATA = "data";
 
-    public static final String RESULT_OK = "00";
+    private static final String RESULT_OK = "00";
     public static final String RESULT_DATA_NOT_FOUND = "04";
     public static final String RESULT_NOK = "05";
     public static final String RESULT_INVALID_REQ = "99";
@@ -53,20 +53,20 @@ public class SuperMessage extends HashMap<String, Object> {
         setItem(INDEX_DESC, message);
     }
 
-    protected void setItem(String key, Object value) {
+    void setItem(String key, Object value) {
         put(key, value);
     }
 
-    protected Object getItem(String key) {
+    private Object getItem(String key) {
         return get(key);
     }
 
     public Map getDataAsMap() {
-        return Var.toHashMap(getItem("data"));
+        return Var.toHashMap(getItem(INDEX_DATA));
     }
 
     public List getDataAsList() {
-        return Var.toArrayList(getItem("data"));
+        return Var.toArrayList(getItem(INDEX_DATA));
     }
 
 }

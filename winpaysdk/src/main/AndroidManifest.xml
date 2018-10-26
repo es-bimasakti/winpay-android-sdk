@@ -22,17 +22,19 @@
             android:screenOrientation="portrait"
             android:theme="@style/WPIAppTheme.Transparent" />
 
-        <!--<activity-->
-        <!--android:name=".main.WPIWebActivity"-->
-        <!--android:configChanges="orientation|keyboardHidden"-->
-        <!--android:launchMode="singleTop"-->
-        <!--android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".main.activity.WPIRedirectActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/WPIAppTheme" />
 
-        <!--<activity-->
-        <!--android:name=".main.WPIInvoiceActivity"-->
-        <!--android:configChanges="orientation|keyboardHidden"-->
-        <!--android:launchMode="singleTop"-->
-        <!--android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".main.activity.WPIWebActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/WPIAppTheme" />
 
     </application>
 

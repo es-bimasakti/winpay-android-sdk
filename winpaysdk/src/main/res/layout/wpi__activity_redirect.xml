@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/wpi_sandbox_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/wpi__colorAccent"
+        android:gravity="center"
+        android:padding="@dimen/wpi__padding_medium"
+        android:text="@string/app_warning_sandbox"
+        android:textColor="@android:color/white" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <im.delight.android.webview.AdvancedWebView
+            android:id="@+id/wpi_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <id.winpay.winpaysdk.main.widget.WPILoadingView
+            android:id="@+id/wpi_webview_loading"
+            android:layout_width="@dimen/wpi__icon_large"
+            android:layout_height="@dimen/wpi__icon_large"
+            android:layout_gravity="center" />
+    </FrameLayout>
+</LinearLayout>

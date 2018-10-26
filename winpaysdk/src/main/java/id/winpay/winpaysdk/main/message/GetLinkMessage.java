@@ -50,10 +50,10 @@ public final class GetLinkMessage extends SuperMessage {
 
         if (!is_direct) {
             try {
-                setItem("spi_callback", config.getURL() + "wpi_lib/callback/" +
+                setItem("spi_callback", config.getURL() + "plugin/android/callback/" +
                         URLEncoder.encode(wpi.getSpi_merchant_transaction_reff(), "UTF-8"));
             } catch (UnsupportedEncodingException ignored) {
-                setItem("spi_callback", config.getURL() + "wpi_lib/callback/" +
+                setItem("spi_callback", config.getURL() + "plugin/android/callback/" +
                         wpi.getSpi_merchant_transaction_reff().replaceAll("[^0-9a-zA-Z]", ""));
             }
         }

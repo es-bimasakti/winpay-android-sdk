@@ -155,12 +155,13 @@ public abstract class WPIToolbarActivity extends WPIActivity implements WPIActiv
                     if (token.isEmpty()) {
                         onRequestInquiryFailed("YY", getString(R.string.wpi__warning_connection_response));
                     } else {
-                        postDirect(token);
+                        postWPI(token);
                     }
                 } else {
                     onRequestInquiryFailed(msg.getResponse_code(), msg.getMessageDescription());
                 }
                 break;
+            case "redirect":
             case "direct":
                 if (msg.isOK()) {
                     Map data = msg.getDataAsMap();
@@ -175,7 +176,13 @@ public abstract class WPIToolbarActivity extends WPIActivity implements WPIActiv
                     response.setTotal_amount(Var.toDouble(data.get("total_amount"), 0));
                     response.setSpi_status_url(Var.toString(data.get("spi_status_url"), ""));
 
-                    processPaymentDirect(response);
+                    if (tag.equals("direct")) {
+                        processPaymentDirect(response);
+                    } else {
+                        response.setSpi_payment_url(Var.toString(data.get("url_payment"), ""));
+
+                        processPaymentRedirect(response);
+                    }
                 } else {
                     onRequestInquiryFailed(msg.getResponse_code(), msg.getMessageDescription());
                 }
@@ -189,32 +196,26 @@ public abstract class WPIToolbarActivity extends WPIActivity implements WPIActiv
 
     protected abstract void processPaymentDirect(WPIResponse response);
 
+    protected abstract void processPaymentRedirect(WPIResponse response);
+
     protected void onAfterCreate() {
     }
 
     protected final void getToken(Channel channel) {
         this.channel = channel;
 
-        if (channel.isDirect()) {
-            AppConfig config = AppConfig.getConfig(this);
-            String pv = config.getPrivateKey1() + ":" + config.getPrivateKey2();
+        AppConfig config = AppConfig.getConfig(this);
+        String pv = config.getPrivateKey1() + ":" + config.getPrivateKey2();
 
-            MessageSender sender = new MessageSender(this)
-                    .setData_type(MessageSender.FORMAT_FORM_ENCODED)
-                    .setRequest_method(MessageSender.GET)
-                    .setPath("token")
-                    .setTag("get_token");
-            sender.addHeader("Authorization", "Basic " + Base64.encodeToString(pv.getBytes(), Base64.NO_WRAP))
-                    .addHeader("Referer", getApplicationContext().getPackageName());
-            sender.setMessageProcess(this)
-                    .execute();
-        } else {
-            WPIResponse response = new WPIResponse();
-            response.setResponse_code("YY");
-            response.setResponse_desc(getString(R.string.wpi__info_response_feature_not_supported));
-
-            AffinityHelper.beam(this, WPIConstant.RESULT_FEATURE_NOT_SUPPORTED, AffinityHelper.responseToIntent(response));
-        }
+        MessageSender sender = new MessageSender(this)
+                .setData_type(MessageSender.FORMAT_FORM_ENCODED)
+                .setRequest_method(MessageSender.GET)
+                .setPath("token")
+                .setTag("get_token");
+        sender.addHeader("Authorization", "Basic " + Base64.encodeToString(pv.getBytes(), Base64.NO_WRAP))
+                .addHeader("Referer", getApplicationContext().getPackageName());
+        sender.setMessageProcess(this)
+                .execute();
     }
 
     private void getToolbar() {
@@ -236,7 +237,7 @@ public abstract class WPIToolbarActivity extends WPIActivity implements WPIActiv
                 .execute();
     }
 
-    private void postDirect(String token) {
+    private void postWPI(String token) {
         GetLinkMessage msg = new GetLinkMessage(this, channel.isDirect(), token, wpi_object);
         msg.setReferrer(getApplicationContext().getPackageName());
         msg.setURLListener(listener);
@@ -255,7 +256,7 @@ public abstract class WPIToolbarActivity extends WPIActivity implements WPIActiv
         MessageSender sender = new MessageSender(this, channel.getPayment_url())
                 .setData_type(MessageSender.FORMAT_FORM_ENCODED)
                 .setRequest_method(MessageSender.POST)
-                .setTag("direct")
+                .setTag(channel.isDirect() ? "direct" : "redirect")
                 .addMessage("orderdata", orderdata);
         sender.setMessageProcess(this)
                 .execute();

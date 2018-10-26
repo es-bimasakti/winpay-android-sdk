@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/app_channel_direct"
+            android:text="@string/wpi__title_direct"
             android:textColor="@color/wpi__colorAccent"
             android:textStyle="italic|bold"
             android:visibility="visible" />

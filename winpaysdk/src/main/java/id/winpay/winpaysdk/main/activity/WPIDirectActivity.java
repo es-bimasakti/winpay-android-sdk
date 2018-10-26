@@ -1,7 +1,6 @@
 package id.winpay.winpaysdk.main.activity;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.view.View;
@@ -9,6 +8,7 @@ import android.widget.TextView;
 
 import id.winpay.winpaysdk.R;
 import id.winpay.winpaysdk.main.helper.AffinityHelper;
+import id.winpay.winpaysdk.main.item.WPIResponse;
 import id.winpay.winpaysdk.util.Var;
 
 /**
@@ -19,14 +19,18 @@ public final class WPIDirectActivity extends WPIActivity implements View.OnClick
     private static final String WPI_PAYMENT_CODE = "payment_code";
     private static final String WPI_DESCRIPTION = "description";
     private static final String WPI_URL_STATUS = "url_status";
-    private String payment_code, description, url_status;
+    private static final String WPI_TITLE = "title";
+    private String payment_code, title, description, url_status;
     private TextView direct_payment_code;
 
-    public static void start(WPIToolbarActivity activity, String payment_code, String description, String url_status) {
+    public static void start(WPIToolbarActivity activity, WPIResponse response) {
+        String title = activity.getString(R.string.wpi__info_title_format, response.getPayment_method());
+
         Bundle bundle = new Bundle();
-        bundle.putString(WPI_PAYMENT_CODE, payment_code);
-        bundle.putString(WPI_DESCRIPTION, description);
-        bundle.putString(WPI_URL_STATUS, url_status);
+        bundle.putString(WPI_PAYMENT_CODE, response.getPayment_code());
+        bundle.putString(WPI_DESCRIPTION, response.getResponse_desc());
+        bundle.putString(WPI_URL_STATUS, response.getSpi_status_url());
+        bundle.putString(WPI_TITLE, title);
 
         Intent intent = new Intent(activity, WPIDirectActivity.class);
         intent.putExtras(bundle);
@@ -44,14 +48,17 @@ public final class WPIDirectActivity extends WPIActivity implements View.OnClick
             payment_code = savedInstanceState.getString(WPI_PAYMENT_CODE);
             description = savedInstanceState.getString(WPI_DESCRIPTION);
             url_status = savedInstanceState.getString(WPI_URL_STATUS);
+            title = savedInstanceState.getString(WPI_TITLE);
         } else if (getIntent().getExtras() != null) {
             payment_code = getIntent().getExtras().getString(WPI_PAYMENT_CODE);
             description = getIntent().getExtras().getString(WPI_DESCRIPTION);
             url_status = getIntent().getExtras().getString(WPI_URL_STATUS);
+            title = getIntent().getExtras().getString(WPI_TITLE);
         } else {
             payment_code = "";
             description = "";
             url_status = "";
+            title = "";
         }
 
         String[] part = description.split(payment_code);
@@ -75,6 +82,7 @@ public final class WPIDirectActivity extends WPIActivity implements View.OnClick
         savedInstanceState.putString(WPI_PAYMENT_CODE, payment_code);
         savedInstanceState.putString(WPI_DESCRIPTION, description);
         savedInstanceState.putString(WPI_URL_STATUS, url_status);
+        savedInstanceState.putString(WPI_TITLE, title);
 
         super.onSaveInstanceState(savedInstanceState);
     }
@@ -84,9 +92,7 @@ public final class WPIDirectActivity extends WPIActivity implements View.OnClick
         if (view.getId() == R.id.wpi__direct_payment_code || view.getId() == R.id.wpi__direct_copy) {
             AffinityHelper.copy(this, direct_payment_code.getText().toString());
         } else if (view.getId() == R.id.wpi__btn_visit) {
-            //TODO: Open WebActivity
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url_status));
-            startActivity(browserIntent);
+            WPIWebActivity.start(this, title, url_status);
         } else {
             finish();
         }

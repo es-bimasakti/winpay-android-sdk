@@ -88,13 +88,18 @@ public final class WPIToolbarImplActivity extends WPIToolbarActivity implements 
 
     @Override
     protected void processPaymentDirect(WPIResponse response) {
-        WPIDirectActivity.start(this, response.getPayment_code(), response.getResponse_desc(), response.getSpi_status_url());
+        WPIDirectActivity.start(this, response);
         AffinityHelper.beam(this, WPIConstant.RESULT_OK, AffinityHelper.responseToIntent(response));
     }
 
     @Override
+    protected void processPaymentRedirect(WPIResponse response) {
+        WPIRedirectActivity.start(this, response.getSpi_payment_url());
+    }
+
+    @Override
     public int getLayoutResource() {
-        return R.layout.wpi__activity_wpi_toolbar;
+        return R.layout.wpi__activity_toolbar;
     }
 
     @Override

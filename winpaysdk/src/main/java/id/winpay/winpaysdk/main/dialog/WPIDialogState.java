@@ -15,7 +15,7 @@ public class WPIDialogState {
     public @interface DialogState {
     }
 
-    public static final int STATE_CONFIRM = 0;
+    private static final int STATE_CONFIRM = 0;
     public static final int STATE_OK = 1;
     public static final int STATE_WARNING = 2;
     public static final int STATE_CANCEL = 3;

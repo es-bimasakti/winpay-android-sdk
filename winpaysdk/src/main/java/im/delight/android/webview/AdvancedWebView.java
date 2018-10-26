@@ -64,7 +64,6 @@ import java.util.Map;
 /**
  * Advanced WebView component for Android that works as intended out of the box
  */
-@SuppressWarnings("deprecation")
 public class AdvancedWebView extends WebView {
 
     public interface Listener {

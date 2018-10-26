@@ -12,7 +12,7 @@ import java.util.Locale;
 /**
  * Created by Dian Cahyono on 05/10/18.
  */
-abstract class WPIActivity extends AppCompatActivity {
+class WPIActivity extends AppCompatActivity {
 
     @CallSuper
     @Override

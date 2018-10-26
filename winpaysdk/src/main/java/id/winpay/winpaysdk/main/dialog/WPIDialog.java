@@ -20,7 +20,7 @@ import id.winpay.winpaysdk.R;
  */
 abstract class WPIDialog extends DialogFragment {
 
-    protected TextView dialog_title;
+    TextView dialog_title;
 
     private WPIDialogState.DialogCallback onDialogCallback;
     private WPIDialogState.DialogClosingListener onDialogClosingListener;
@@ -79,7 +79,7 @@ abstract class WPIDialog extends DialogFragment {
         this.onDialogClosingListener = onDialogClosingListener;
     }
 
-    protected WPIDialogState.DialogCallback getOnDialogCallback() {
+    WPIDialogState.DialogCallback getOnDialogCallback() {
         return onDialogCallback;
     }
 

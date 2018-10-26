@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/wpi__colorPrimary"
+        android:padding="@dimen/wpi__padding_small">
+
+        <ImageView
+            android:id="@+id/wpi_webview_icon"
+            android:layout_width="@dimen/wpi__icon_medium"
+            android:layout_height="@dimen/wpi__icon_medium"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_real_name"
+            android:src="@drawable/wpi__ic_error" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/wpi__padding_small"
+            android:layout_marginRight="@dimen/wpi__padding_small"
+            android:layout_toLeftOf="@id/wpi_webview_icon"
+            android:layout_toStartOf="@id/wpi_webview_icon"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/wpi_webview_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/wpi__colorBackground"
+                android:textSize="@dimen/wpi__text_size_medium"
+                android:textStyle="bold"
+                tools:text="WinPay Web" />
+
+            <TextView
+                android:id="@+id/wpi_webview_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:textColor="@color/wpi__colorBackground"
+                android:textSize="@dimen/wpi__text_size_small"
+                tools:text="https://www.winpay.id/" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <im.delight.android.webview.AdvancedWebView
+            android:id="@+id/wpi_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <id.winpay.winpaysdk.main.widget.WPILoadingView
+            android:id="@+id/wpi_webview_loading"
+            android:layout_width="@dimen/wpi__icon_large"
+            android:layout_height="@dimen/wpi__icon_large"
+            android:layout_gravity="center" />
+    </FrameLayout>
+</LinearLayout>

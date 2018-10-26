@@ -3,6 +3,7 @@
     <bool name="wpi__sandbox_mode">false</bool>
     <bool name="wpi__is_loggable">false</bool>
     <bool name="wpi__show_direct_label">@bool/wpi__sandbox_mode</bool>
+    <bool name="wpi__show_redirect_url">true</bool>
 
     <color name="wpi__colorPrimary">#1B75BC</color>
     <color name="wpi__colorPrimaryDark">#004F92</color>
@@ -16,6 +17,7 @@
     <dimen name="wpi__icon_large">48dp</dimen>
     <dimen name="wpi__padding_small">8dp</dimen>
     <dimen name="wpi__padding_medium">16dp</dimen>
+    <dimen name="wpi__text_size_small">12sp</dimen>
     <dimen name="wpi__text_size_medium">16sp</dimen>
     <dimen name="wpi__text_size_large">24sp</dimen>
 
@@ -37,16 +39,16 @@
     <string name="wpi__button_cancel">Batal</string>
     <string name="wpi__button_visit">Lihat Cara Pembayaran</string>
 
-    <!--<string name="wpi__confirm_exit_web">Transaksi yang dibatalkan tidak dapat diulang, apakah Anda yakin akan membatalkan proses transaksi ini?</string>-->
+    <string name="wpi__confirm_exit_web">Transaksi yang dibatalkan tidak dapat diulang, apakah Anda yakin akan membatalkan proses transaksi ini?</string>
     <string name="wpi__confirm_exit_toolbar">Apakah Anda yakin akan kembali ke halaman sebelumnya?</string>
 
     <string name="wpi__info_process_waiting">mohon tunggu…</string>
     <string name="wpi__info_process_loading">kami sedang memproses permintaan Anda</string>
     <string name="wpi__info_response_cancelled">Transaksi dibatalkan oleh pelanggan</string>
     <string name="wpi__info_response_unknown">Kesalahan Umum</string>
-    <string name="wpi__info_response_feature_not_supported">Fitur Belum Tersedia</string>
     <string name="wpi__info_text_copied">Teks telah tersalin</string>
     <string name="wpi__info_toolbar">Silakan pilih media pembayaran favorit Anda untuk melanjutkan pembayaran</string>
+    <string name="wpi__info_title_format">Pembayaran %1$s</string>
 
     <string name="wpi__warning_connection_failure">Tidak dapat tersambung ke Server</string>
     <string name="wpi__warning_connection_denied">Ditolak Server dengan kode %1$d</string>
@@ -59,4 +61,5 @@
     <string name="wpi__title_confirm">Konfirmasi</string>
     <string name="wpi__title_info">Informasi</string>
     <string name="wpi__title_warning">Perhatian</string>
+    <string name="wpi__title_direct">Direct</string>
 </resources>

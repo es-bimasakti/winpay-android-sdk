@@ -2,5 +2,4 @@
     <string name="app_name">WinPay SDK</string>
     <string name="app_real_name">WinPay</string>
     <string name="app_warning_sandbox">WinPay Payment Interface (WPI) ini dalam mode "Sandbox", semua transaksi yang terjadi adalah simulasi.</string>
-    <string name="app_channel_direct">Direct</string>
 </resources>
