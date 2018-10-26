@@ -2,9 +2,6 @@
 
 [![GPL Licence](https://member.winpay.id/assets/img/sdk-android/license.svg)](https://opensource.org/licenses/GPL-3.0/) [![Maintenance](https://member.winpay.id/assets/img/sdk-android/maintained.svg)](https://github.com/es-bimasakti/winpay-android-sdk/graphs/commit-activity)  [![Release](https://member.winpay.id/assets/img/sdk-android/release.svg)](https://github.com/es-bimasakti/winpay-android-sdk/releases) 
 
-
-***===SDK ini sedang dalam masa development, pemakaian sebelum rilis tidak disarankan dan resiko tidak ditanggung===***
-
 >[WinPay](https://www.winpay.id/)  merupakan salah satu Payment Gateway Indonesia yang menyediakan sarana dan prasarana yang lengkap untuk pemilik toko/bisnis online dan kemudahan pembeli dalam melakukan pilihan pembayaran yang beragam. WinPay merupakan bagian dari [PT. Bimasakti Multi Sinergi](https://www.bm.co.id/).
 
 SDK ini dibuat untuk memudahkan pemilik usaha atau *Merchant* dalam melakukan integrasi ke *Payment Gateway* WinPay dengan platform Android.
@@ -279,10 +276,6 @@ Panggil *Activity* Anda
 ```java
 WPIToolbarActivity.start(activity, MyWPIActivity.class, request_code, wpi_object, url_listener);
 ```
-
-|
-|
-|
 
 ## Author
 
