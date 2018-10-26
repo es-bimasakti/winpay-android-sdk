@@ -159,7 +159,7 @@ public final class WPIWebActivity extends WPIActivity implements AdvancedWebView
 
     @Override
     public void onDownloadRequested(String url, String suggestedFilename, String mimeType, long contentLength, String contentDisposition, String userAgent) {
-
+        onExternalPageRequest(url);
     }
 
     @Override
